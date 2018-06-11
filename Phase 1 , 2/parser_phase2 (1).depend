@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1524594941 source:e:\parser_phase2\convert_to_ll1.cpp
+	"convert_to_LL1.h"
+	<cstdlib>
+
+1524434346 e:\parser_phase2\convert_to_ll1.h
+	<fstream>
+	<sstream>
+	<iostream>
+	<string>
+	<vector>
+
+1524496732 source:e:\parser_phase2\main.cpp
+	<iostream>
+	"convert_to_LL1.h"
+	"first_follow.h"
+	"parsingTable.h"
+
+1524497726 source:e:\parser_phase2\first_follow.cpp
+	"first_follow.h"
+
+1524248962 e:\parser_phase2\first_follow.h
+	<fstream>
+	<sstream>
+	<iostream>
+	<string>
+	<vector>
+	"convert_to_LL1.h"
+
+1524478857 e:\parser_phase2\parsingtable.h
+	"first_follow.h"
+	<stack>
+	<iostream>
+	<cstdlib>
+
+1524497856 source:e:\parser_phase2\parsingtable.cpp
+	"parsingTable.h"
+	"first_follow.h"
+	<iostream>
+	<string>
+	<vector>
+

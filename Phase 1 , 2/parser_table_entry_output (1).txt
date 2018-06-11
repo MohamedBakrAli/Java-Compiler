@@ -1,0 +1,91 @@
+METHOD_BODY =   STATEMENT_LIST
+STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#   
+STATEMENT =   DECLARATION  
+DECLARATION =   PRIMITIVE_TYPE id ;
+PRIMITIVE_TYPE =   int  
+Match(int)
+Match(id)
+Match(;)
+STATEMENT_LIST#  =  STATEMENT  STATEMENT_LIST# 
+STATEMENT =   DECLARATION  
+DECLARATION =   PRIMITIVE_TYPE id ;
+PRIMITIVE_TYPE =   float
+Match(float)
+Match(id)
+Match(;)
+STATEMENT_LIST#  =  STATEMENT  STATEMENT_LIST# 
+STATEMENT =   IF  
+IF =   if ( EXPRESSION ) { STATEMENT } else { STATEMENT }
+Match(if)
+Match(()
+EXPRESSION = SIMPLE_EXPRESSION EXPRESSION'
+SIMPLE_EXPRESSION =   TERM  SIMPLE_EXPRESSION#   
+TERM =   FACTOR  TERM#
+FACTOR =   id  
+Match(id)
+Error ,illegal (TERM#)-discard (TERM#)
+-EPSILON-
+EXPRESSION' =  relop SIMPLE_EXPRESSION
+Match(relop)
+SIMPLE_EXPRESSION =   TERM  SIMPLE_EXPRESSION#   
+TERM =   FACTOR  TERM#
+FACTOR =   id  
+Match(id)
+Error ,illegal (TERM#)-discard (TERM#)
+-EPSILON-
+Match())
+Match({)
+STATEMENT =   WHILE  
+WHILE =   while ( EXPRESSION ) { STATEMENT }
+Match(while)
+Match(()
+EXPRESSION = SIMPLE_EXPRESSION EXPRESSION'
+SIMPLE_EXPRESSION =   TERM  SIMPLE_EXPRESSION#   
+TERM =   FACTOR  TERM#
+FACTOR =   id  
+Match(id)
+Error ,illegal (TERM#)-discard (TERM#)
+-EPSILON-
+EXPRESSION' =  relop SIMPLE_EXPRESSION
+Match(relop)
+SIMPLE_EXPRESSION =   TERM  SIMPLE_EXPRESSION#   
+TERM =   FACTOR  TERM#
+FACTOR =   id  
+Match(id)
+Error ,illegal (TERM#)-discard (TERM#)
+-EPSILON-
+Match())
+Match({)
+STATEMENT =   ASSIGNMENT  
+ASSIGNMENT =   id = EXPRESSION ;
+Match(id)
+Match(=)
+EXPRESSION = SIMPLE_EXPRESSION EXPRESSION'
+SIMPLE_EXPRESSION =   TERM  SIMPLE_EXPRESSION#   
+TERM =   FACTOR  TERM#
+FACTOR =   id  
+Match(id)
+Error ,illegal (TERM#)-discard (TERM#)
+-EPSILON-
+-EPSILON-
+Match(;)
+Error,unmatched terminal (}) inserted
+Error,unmatched terminal (}) inserted
+Error,unmatched terminal (else) inserted
+Error,unmatched terminal ({) inserted
+STATEMENT =   ASSIGNMENT  
+ASSIGNMENT =   id = EXPRESSION ;
+Match(id)
+Match(=)
+EXPRESSION = SIMPLE_EXPRESSION EXPRESSION'
+SIMPLE_EXPRESSION =   TERM  SIMPLE_EXPRESSION#   
+TERM =   FACTOR  TERM#
+FACTOR =   num  
+Match(num)
+Error ,illegal (TERM#)-discard (TERM#)
+Error ,illegal (SIMPLE_EXPRESSION#)-discard (SIMPLE_EXPRESSION#)
+Error ,illegal (EXPRESSION')-discard (EXPRESSION')
+Error,unmatched terminal (;) inserted
+Match(})
+Error ,illegal (STATEMENT_LIST#)-discard (STATEMENT_LIST#)
+Error unsuccessful Completion, compiler halts

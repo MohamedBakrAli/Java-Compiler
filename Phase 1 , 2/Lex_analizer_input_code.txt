@@ -1,0 +1,11 @@
+int x;
+float y ;
+if(x > y)
+{
+while (x > y)
+{
+  x = y;
+  x = 5;
+}
+}
+

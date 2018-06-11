@@ -1,0 +1,516 @@
+SIGN =   +    +
+16  16
+SIGN =   -  -
+16  17
+FACTOR =   id    id
+15  0
+FACTOR =   num    num
+15  15
+FACTOR =   ( EXPRESSION )  (
+15  5
+TERM#  =  mulop FACTOR  TERM#   mulop
+14  14
+TERM#  =   L  L
+14  -1
+TERM =   FACTOR  TERM#  id 
+13  0
+TERM =   FACTOR  TERM#  num 
+13  15
+TERM =   FACTOR  TERM#  ( 
+13  5
+SIMPLE_EXPRESSION#  =  addop TERM  SIMPLE_EXPRESSION#   addop
+12  13
+SIMPLE_EXPRESSION#  =   L  L
+12  -1
+SIMPLE_EXPRESSION =   TERM  SIMPLE_EXPRESSION#     id  
+11  0
+SIMPLE_EXPRESSION =   TERM  SIMPLE_EXPRESSION#     num  
+11  15
+SIMPLE_EXPRESSION =   TERM  SIMPLE_EXPRESSION#     (  
+11  5
+SIMPLE_EXPRESSION =    SIGN TERM  SIMPLE_EXPRESSION#  + 
+11  16
+SIMPLE_EXPRESSION =    SIGN TERM  SIMPLE_EXPRESSION#  - 
+11  17
+EXPRESSION' =  L    L
+10  -1
+EXPRESSION' =  relop SIMPLE_EXPRESSION  relop
+10  12
+EXPRESSION = SIMPLE_EXPRESSION EXPRESSION'  id   
+9  0
+EXPRESSION = SIMPLE_EXPRESSION EXPRESSION'  num   
+9  15
+EXPRESSION = SIMPLE_EXPRESSION EXPRESSION'  (   
+9  5
+EXPRESSION = SIMPLE_EXPRESSION EXPRESSION'  +  
+9  16
+EXPRESSION = SIMPLE_EXPRESSION EXPRESSION'  -  
+9  17
+ASSIGNMENT =   id = EXPRESSION ;  id
+8  0
+WHILE =   while ( EXPRESSION ) { STATEMENT }  while
+7  10
+IF =   if ( EXPRESSION ) { STATEMENT } else { STATEMENT }  if
+6  4
+PRIMITIVE_TYPE =   int    int
+5  2
+PRIMITIVE_TYPE =   float  float
+5  3
+DECLARATION =   PRIMITIVE_TYPE id ;  int 
+4  2
+DECLARATION =   PRIMITIVE_TYPE id ;  float 
+4  3
+STATEMENT =   DECLARATION    int  
+3  2
+STATEMENT =   DECLARATION    float  
+3  3
+STATEMENT =   IF    if 
+3  4
+STATEMENT =   WHILE    while 
+3  10
+STATEMENT =   ASSIGNMENT    id 
+3  0
+STATEMENT =   L  L
+3  -1
+STATEMENT_LIST#  =  STATEMENT  STATEMENT_LIST#   int   
+2  2
+STATEMENT_LIST#  =  STATEMENT  STATEMENT_LIST#   float   
+2  3
+STATEMENT_LIST#  =  STATEMENT  STATEMENT_LIST#   if  
+2  4
+STATEMENT_LIST#  =  STATEMENT  STATEMENT_LIST#   while  
+2  10
+STATEMENT_LIST#  =  STATEMENT  STATEMENT_LIST#   id  
+2  0
+STATEMENT_LIST#  =   L  L
+2  -1
+STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     int   
+1  2
+STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     float   
+1  3
+STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     if  
+1  4
+STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     while  
+1  10
+STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     id  
+1  0
+STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     int    
+1  2
+STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     float    
+1  3
+STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     if   
+1  4
+STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     while   
+1  10
+STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     id   
+1  0
+STATEMENT_LIST =    L STATEMENT_LIST#  L
+1  -1
+METHOD_BODY =   STATEMENT_LIST  int    
+0  2
+METHOD_BODY =   STATEMENT_LIST  float    
+0  3
+METHOD_BODY =   STATEMENT_LIST  if   
+0  4
+METHOD_BODY =   STATEMENT_LIST  while   
+0  10
+METHOD_BODY =   STATEMENT_LIST  id   
+0  0
+METHOD_BODY =   STATEMENT_LIST  int     
+0  2
+METHOD_BODY =   STATEMENT_LIST  float     
+0  3
+METHOD_BODY =   STATEMENT_LIST  if    
+0  4
+METHOD_BODY =   STATEMENT_LIST  while    
+0  10
+METHOD_BODY =   STATEMENT_LIST  id    
+0  0
+SIGN =   +    +
+SIGN =   -  -
+FACTOR =   id    id
+FACTOR =   num    num
+FACTOR =   ( EXPRESSION )  (
+TERM#  =  mulop FACTOR  TERM#   mulop
+TERM#  =   L  L
+TERM =   FACTOR  TERM#  id 
+TERM =   FACTOR  TERM#  num 
+TERM =   FACTOR  TERM#  ( 
+SIMPLE_EXPRESSION#  =  addop TERM  SIMPLE_EXPRESSION#   addop
+SIMPLE_EXPRESSION#  =   L  L
+SIMPLE_EXPRESSION =   TERM  SIMPLE_EXPRESSION#     id  
+SIMPLE_EXPRESSION =   TERM  SIMPLE_EXPRESSION#     num  
+SIMPLE_EXPRESSION =   TERM  SIMPLE_EXPRESSION#     (  
+SIMPLE_EXPRESSION =    SIGN TERM  SIMPLE_EXPRESSION#  + 
+SIMPLE_EXPRESSION =    SIGN TERM  SIMPLE_EXPRESSION#  - 
+EXPRESSION' =  L    L
+EXPRESSION' =  relop SIMPLE_EXPRESSION  relop
+EXPRESSION = SIMPLE_EXPRESSION EXPRESSION'  id   
+EXPRESSION = SIMPLE_EXPRESSION EXPRESSION'  num   
+EXPRESSION = SIMPLE_EXPRESSION EXPRESSION'  (   
+EXPRESSION = SIMPLE_EXPRESSION EXPRESSION'  +  
+EXPRESSION = SIMPLE_EXPRESSION EXPRESSION'  -  
+ASSIGNMENT =   id = EXPRESSION ;  id
+WHILE =   while ( EXPRESSION ) { STATEMENT }  while
+IF =   if ( EXPRESSION ) { STATEMENT } else { STATEMENT }  if
+PRIMITIVE_TYPE =   int    int
+PRIMITIVE_TYPE =   float  float
+DECLARATION =   PRIMITIVE_TYPE id ;  int 
+DECLARATION =   PRIMITIVE_TYPE id ;  float 
+STATEMENT =   DECLARATION    int  
+STATEMENT =   DECLARATION    float  
+STATEMENT =   IF    if 
+STATEMENT =   WHILE    while 
+STATEMENT =   ASSIGNMENT    id 
+STATEMENT =   L  L
+STATEMENT_LIST#  =  STATEMENT  STATEMENT_LIST#   int   
+STATEMENT_LIST#  =  STATEMENT  STATEMENT_LIST#   float   
+STATEMENT_LIST#  =  STATEMENT  STATEMENT_LIST#   if  
+STATEMENT_LIST#  =  STATEMENT  STATEMENT_LIST#   while  
+STATEMENT_LIST#  =  STATEMENT  STATEMENT_LIST#   id  
+STATEMENT_LIST#  =   L  L
+STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     int   
+STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     float   
+STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     if  
+STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     while  
+STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     id  
+STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     int    
+STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     float    
+STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     if   
+STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     while   
+STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     id   
+STATEMENT_LIST =    L STATEMENT_LIST#  L
+METHOD_BODY =   STATEMENT_LIST  int    
+METHOD_BODY =   STATEMENT_LIST  float    
+METHOD_BODY =   STATEMENT_LIST  if   
+METHOD_BODY =   STATEMENT_LIST  while   
+METHOD_BODY =   STATEMENT_LIST  id   
+METHOD_BODY =   STATEMENT_LIST  int     
+METHOD_BODY =   STATEMENT_LIST  float     
+METHOD_BODY =   STATEMENT_LIST  if    
+METHOD_BODY =   STATEMENT_LIST  while    
+METHOD_BODY =   STATEMENT_LIST  id    
+id     ;     int     float     if     (     )     {     }     else     while     =     relop     addop     mulop     num     +     -     $     
+( 0 , 0 ) METHOD_BODY  ->  id  ---->  METHOD_BODY =   STATEMENT_LIST  
+( 0 , 1 ) METHOD_BODY  ->  ;  ---->    
+( 0 , 2 ) METHOD_BODY  ->  int  ---->  METHOD_BODY =   STATEMENT_LIST  
+( 0 , 3 ) METHOD_BODY  ->  float  ---->  METHOD_BODY =   STATEMENT_LIST  
+( 0 , 4 ) METHOD_BODY  ->  if  ---->  METHOD_BODY =   STATEMENT_LIST  
+( 0 , 5 ) METHOD_BODY  ->  (  ---->    
+( 0 , 6 ) METHOD_BODY  ->  )  ---->    
+( 0 , 7 ) METHOD_BODY  ->  {  ---->    
+( 0 , 8 ) METHOD_BODY  ->  }  ---->    
+( 0 , 9 ) METHOD_BODY  ->  else  ---->    
+( 0 , 10 ) METHOD_BODY  ->  while  ---->  METHOD_BODY =   STATEMENT_LIST  
+( 0 , 11 ) METHOD_BODY  ->  =  ---->    
+( 0 , 12 ) METHOD_BODY  ->  relop  ---->    
+( 0 , 13 ) METHOD_BODY  ->  addop  ---->    
+( 0 , 14 ) METHOD_BODY  ->  mulop  ---->    
+( 0 , 15 ) METHOD_BODY  ->  num  ---->    
+( 0 , 16 ) METHOD_BODY  ->  +  ---->    
+( 0 , 17 ) METHOD_BODY  ->  -  ---->    
+( 0 , 18 ) METHOD_BODY  ->  $  ---->  synch  
+( 1 , 0 ) STATEMENT_LIST  ->  id  ---->  STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     
+( 1 , 1 ) STATEMENT_LIST  ->  ;  ---->    
+( 1 , 2 ) STATEMENT_LIST  ->  int  ---->  STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     
+( 1 , 3 ) STATEMENT_LIST  ->  float  ---->  STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     
+( 1 , 4 ) STATEMENT_LIST  ->  if  ---->  STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     
+( 1 , 5 ) STATEMENT_LIST  ->  (  ---->    
+( 1 , 6 ) STATEMENT_LIST  ->  )  ---->    
+( 1 , 7 ) STATEMENT_LIST  ->  {  ---->    
+( 1 , 8 ) STATEMENT_LIST  ->  }  ---->    
+( 1 , 9 ) STATEMENT_LIST  ->  else  ---->    
+( 1 , 10 ) STATEMENT_LIST  ->  while  ---->  STATEMENT_LIST =   STATEMENT  STATEMENT_LIST#     
+( 1 , 11 ) STATEMENT_LIST  ->  =  ---->    
+( 1 , 12 ) STATEMENT_LIST  ->  relop  ---->    
+( 1 , 13 ) STATEMENT_LIST  ->  addop  ---->    
+( 1 , 14 ) STATEMENT_LIST  ->  mulop  ---->    
+( 1 , 15 ) STATEMENT_LIST  ->  num  ---->    
+( 1 , 16 ) STATEMENT_LIST  ->  +  ---->    
+( 1 , 17 ) STATEMENT_LIST  ->  -  ---->    
+( 1 , 18 ) STATEMENT_LIST  ->  $  ---->  L  
+( 2 , 0 ) STATEMENT_LIST#  ->  id  ---->  STATEMENT_LIST#  =  STATEMENT  STATEMENT_LIST#   
+( 2 , 1 ) STATEMENT_LIST#  ->  ;  ---->    
+( 2 , 2 ) STATEMENT_LIST#  ->  int  ---->  STATEMENT_LIST#  =  STATEMENT  STATEMENT_LIST#   
+( 2 , 3 ) STATEMENT_LIST#  ->  float  ---->  STATEMENT_LIST#  =  STATEMENT  STATEMENT_LIST#   
+( 2 , 4 ) STATEMENT_LIST#  ->  if  ---->  STATEMENT_LIST#  =  STATEMENT  STATEMENT_LIST#   
+( 2 , 5 ) STATEMENT_LIST#  ->  (  ---->    
+( 2 , 6 ) STATEMENT_LIST#  ->  )  ---->    
+( 2 , 7 ) STATEMENT_LIST#  ->  {  ---->    
+( 2 , 8 ) STATEMENT_LIST#  ->  }  ---->    
+( 2 , 9 ) STATEMENT_LIST#  ->  else  ---->    
+( 2 , 10 ) STATEMENT_LIST#  ->  while  ---->  STATEMENT_LIST#  =  STATEMENT  STATEMENT_LIST#   
+( 2 , 11 ) STATEMENT_LIST#  ->  =  ---->    
+( 2 , 12 ) STATEMENT_LIST#  ->  relop  ---->    
+( 2 , 13 ) STATEMENT_LIST#  ->  addop  ---->    
+( 2 , 14 ) STATEMENT_LIST#  ->  mulop  ---->    
+( 2 , 15 ) STATEMENT_LIST#  ->  num  ---->    
+( 2 , 16 ) STATEMENT_LIST#  ->  +  ---->    
+( 2 , 17 ) STATEMENT_LIST#  ->  -  ---->    
+( 2 , 18 ) STATEMENT_LIST#  ->  $  ---->  L  
+( 3 , 0 ) STATEMENT  ->  id  ---->  STATEMENT =   ASSIGNMENT    
+( 3 , 1 ) STATEMENT  ->  ;  ---->    
+( 3 , 2 ) STATEMENT  ->  int  ---->  STATEMENT =   DECLARATION    
+( 3 , 3 ) STATEMENT  ->  float  ---->  STATEMENT =   DECLARATION    
+( 3 , 4 ) STATEMENT  ->  if  ---->  STATEMENT =   IF    
+( 3 , 5 ) STATEMENT  ->  (  ---->    
+( 3 , 6 ) STATEMENT  ->  )  ---->    
+( 3 , 7 ) STATEMENT  ->  {  ---->    
+( 3 , 8 ) STATEMENT  ->  }  ---->  L  
+( 3 , 9 ) STATEMENT  ->  else  ---->    
+( 3 , 10 ) STATEMENT  ->  while  ---->  STATEMENT =   WHILE    
+( 3 , 11 ) STATEMENT  ->  =  ---->    
+( 3 , 12 ) STATEMENT  ->  relop  ---->    
+( 3 , 13 ) STATEMENT  ->  addop  ---->    
+( 3 , 14 ) STATEMENT  ->  mulop  ---->    
+( 3 , 15 ) STATEMENT  ->  num  ---->    
+( 3 , 16 ) STATEMENT  ->  +  ---->    
+( 3 , 17 ) STATEMENT  ->  -  ---->    
+( 3 , 18 ) STATEMENT  ->  $  ---->    
+( 4 , 0 ) DECLARATION  ->  id  ---->  synch  
+( 4 , 1 ) DECLARATION  ->  ;  ---->    
+( 4 , 2 ) DECLARATION  ->  int  ---->  DECLARATION =   PRIMITIVE_TYPE id ;  
+( 4 , 3 ) DECLARATION  ->  float  ---->  DECLARATION =   PRIMITIVE_TYPE id ;  
+( 4 , 4 ) DECLARATION  ->  if  ---->  synch  
+( 4 , 5 ) DECLARATION  ->  (  ---->    
+( 4 , 6 ) DECLARATION  ->  )  ---->    
+( 4 , 7 ) DECLARATION  ->  {  ---->    
+( 4 , 8 ) DECLARATION  ->  }  ---->  synch  
+( 4 , 9 ) DECLARATION  ->  else  ---->    
+( 4 , 10 ) DECLARATION  ->  while  ---->  synch  
+( 4 , 11 ) DECLARATION  ->  =  ---->    
+( 4 , 12 ) DECLARATION  ->  relop  ---->    
+( 4 , 13 ) DECLARATION  ->  addop  ---->    
+( 4 , 14 ) DECLARATION  ->  mulop  ---->    
+( 4 , 15 ) DECLARATION  ->  num  ---->    
+( 4 , 16 ) DECLARATION  ->  +  ---->    
+( 4 , 17 ) DECLARATION  ->  -  ---->    
+( 4 , 18 ) DECLARATION  ->  $  ---->    
+( 5 , 0 ) PRIMITIVE_TYPE  ->  id  ---->  synch  
+( 5 , 1 ) PRIMITIVE_TYPE  ->  ;  ---->    
+( 5 , 2 ) PRIMITIVE_TYPE  ->  int  ---->  PRIMITIVE_TYPE =   int    
+( 5 , 3 ) PRIMITIVE_TYPE  ->  float  ---->  PRIMITIVE_TYPE =   float  
+( 5 , 4 ) PRIMITIVE_TYPE  ->  if  ---->    
+( 5 , 5 ) PRIMITIVE_TYPE  ->  (  ---->    
+( 5 , 6 ) PRIMITIVE_TYPE  ->  )  ---->    
+( 5 , 7 ) PRIMITIVE_TYPE  ->  {  ---->    
+( 5 , 8 ) PRIMITIVE_TYPE  ->  }  ---->    
+( 5 , 9 ) PRIMITIVE_TYPE  ->  else  ---->    
+( 5 , 10 ) PRIMITIVE_TYPE  ->  while  ---->    
+( 5 , 11 ) PRIMITIVE_TYPE  ->  =  ---->    
+( 5 , 12 ) PRIMITIVE_TYPE  ->  relop  ---->    
+( 5 , 13 ) PRIMITIVE_TYPE  ->  addop  ---->    
+( 5 , 14 ) PRIMITIVE_TYPE  ->  mulop  ---->    
+( 5 , 15 ) PRIMITIVE_TYPE  ->  num  ---->    
+( 5 , 16 ) PRIMITIVE_TYPE  ->  +  ---->    
+( 5 , 17 ) PRIMITIVE_TYPE  ->  -  ---->    
+( 5 , 18 ) PRIMITIVE_TYPE  ->  $  ---->    
+( 6 , 0 ) IF  ->  id  ---->  synch  
+( 6 , 1 ) IF  ->  ;  ---->    
+( 6 , 2 ) IF  ->  int  ---->  synch  
+( 6 , 3 ) IF  ->  float  ---->  synch  
+( 6 , 4 ) IF  ->  if  ---->  IF =   if ( EXPRESSION ) { STATEMENT } else { STATEMENT }  
+( 6 , 5 ) IF  ->  (  ---->    
+( 6 , 6 ) IF  ->  )  ---->    
+( 6 , 7 ) IF  ->  {  ---->    
+( 6 , 8 ) IF  ->  }  ---->  synch  
+( 6 , 9 ) IF  ->  else  ---->    
+( 6 , 10 ) IF  ->  while  ---->  synch  
+( 6 , 11 ) IF  ->  =  ---->    
+( 6 , 12 ) IF  ->  relop  ---->    
+( 6 , 13 ) IF  ->  addop  ---->    
+( 6 , 14 ) IF  ->  mulop  ---->    
+( 6 , 15 ) IF  ->  num  ---->    
+( 6 , 16 ) IF  ->  +  ---->    
+( 6 , 17 ) IF  ->  -  ---->    
+( 6 , 18 ) IF  ->  $  ---->    
+( 7 , 0 ) WHILE  ->  id  ---->  synch  
+( 7 , 1 ) WHILE  ->  ;  ---->    
+( 7 , 2 ) WHILE  ->  int  ---->  synch  
+( 7 , 3 ) WHILE  ->  float  ---->  synch  
+( 7 , 4 ) WHILE  ->  if  ---->  synch  
+( 7 , 5 ) WHILE  ->  (  ---->    
+( 7 , 6 ) WHILE  ->  )  ---->    
+( 7 , 7 ) WHILE  ->  {  ---->    
+( 7 , 8 ) WHILE  ->  }  ---->  synch  
+( 7 , 9 ) WHILE  ->  else  ---->    
+( 7 , 10 ) WHILE  ->  while  ---->  WHILE =   while ( EXPRESSION ) { STATEMENT }  
+( 7 , 11 ) WHILE  ->  =  ---->    
+( 7 , 12 ) WHILE  ->  relop  ---->    
+( 7 , 13 ) WHILE  ->  addop  ---->    
+( 7 , 14 ) WHILE  ->  mulop  ---->    
+( 7 , 15 ) WHILE  ->  num  ---->    
+( 7 , 16 ) WHILE  ->  +  ---->    
+( 7 , 17 ) WHILE  ->  -  ---->    
+( 7 , 18 ) WHILE  ->  $  ---->    
+( 8 , 0 ) ASSIGNMENT  ->  id  ---->  ASSIGNMENT =   id = EXPRESSION ;  
+( 8 , 1 ) ASSIGNMENT  ->  ;  ---->    
+( 8 , 2 ) ASSIGNMENT  ->  int  ---->  synch  
+( 8 , 3 ) ASSIGNMENT  ->  float  ---->  synch  
+( 8 , 4 ) ASSIGNMENT  ->  if  ---->  synch  
+( 8 , 5 ) ASSIGNMENT  ->  (  ---->    
+( 8 , 6 ) ASSIGNMENT  ->  )  ---->    
+( 8 , 7 ) ASSIGNMENT  ->  {  ---->    
+( 8 , 8 ) ASSIGNMENT  ->  }  ---->  synch  
+( 8 , 9 ) ASSIGNMENT  ->  else  ---->    
+( 8 , 10 ) ASSIGNMENT  ->  while  ---->  synch  
+( 8 , 11 ) ASSIGNMENT  ->  =  ---->    
+( 8 , 12 ) ASSIGNMENT  ->  relop  ---->    
+( 8 , 13 ) ASSIGNMENT  ->  addop  ---->    
+( 8 , 14 ) ASSIGNMENT  ->  mulop  ---->    
+( 8 , 15 ) ASSIGNMENT  ->  num  ---->    
+( 8 , 16 ) ASSIGNMENT  ->  +  ---->    
+( 8 , 17 ) ASSIGNMENT  ->  -  ---->    
+( 8 , 18 ) ASSIGNMENT  ->  $  ---->    
+( 9 , 0 ) EXPRESSION  ->  id  ---->  EXPRESSION = SIMPLE_EXPRESSION EXPRESSION'  
+( 9 , 1 ) EXPRESSION  ->  ;  ---->  synch  
+( 9 , 2 ) EXPRESSION  ->  int  ---->    
+( 9 , 3 ) EXPRESSION  ->  float  ---->    
+( 9 , 4 ) EXPRESSION  ->  if  ---->    
+( 9 , 5 ) EXPRESSION  ->  (  ---->  EXPRESSION = SIMPLE_EXPRESSION EXPRESSION'  
+( 9 , 6 ) EXPRESSION  ->  )  ---->  synch  
+( 9 , 7 ) EXPRESSION  ->  {  ---->    
+( 9 , 8 ) EXPRESSION  ->  }  ---->    
+( 9 , 9 ) EXPRESSION  ->  else  ---->    
+( 9 , 10 ) EXPRESSION  ->  while  ---->    
+( 9 , 11 ) EXPRESSION  ->  =  ---->    
+( 9 , 12 ) EXPRESSION  ->  relop  ---->    
+( 9 , 13 ) EXPRESSION  ->  addop  ---->    
+( 9 , 14 ) EXPRESSION  ->  mulop  ---->    
+( 9 , 15 ) EXPRESSION  ->  num  ---->  EXPRESSION = SIMPLE_EXPRESSION EXPRESSION'  
+( 9 , 16 ) EXPRESSION  ->  +  ---->  EXPRESSION = SIMPLE_EXPRESSION EXPRESSION'  
+( 9 , 17 ) EXPRESSION  ->  -  ---->  EXPRESSION = SIMPLE_EXPRESSION EXPRESSION'  
+( 9 , 18 ) EXPRESSION  ->  $  ---->    
+( 10 , 0 ) EXPRESSION'  ->  id  ---->    
+( 10 , 1 ) EXPRESSION'  ->  ;  ---->  L  
+( 10 , 2 ) EXPRESSION'  ->  int  ---->    
+( 10 , 3 ) EXPRESSION'  ->  float  ---->    
+( 10 , 4 ) EXPRESSION'  ->  if  ---->    
+( 10 , 5 ) EXPRESSION'  ->  (  ---->    
+( 10 , 6 ) EXPRESSION'  ->  )  ---->  L  
+( 10 , 7 ) EXPRESSION'  ->  {  ---->    
+( 10 , 8 ) EXPRESSION'  ->  }  ---->    
+( 10 , 9 ) EXPRESSION'  ->  else  ---->    
+( 10 , 10 ) EXPRESSION'  ->  while  ---->    
+( 10 , 11 ) EXPRESSION'  ->  =  ---->    
+( 10 , 12 ) EXPRESSION'  ->  relop  ---->  EXPRESSION' =  relop SIMPLE_EXPRESSION  
+( 10 , 13 ) EXPRESSION'  ->  addop  ---->    
+( 10 , 14 ) EXPRESSION'  ->  mulop  ---->    
+( 10 , 15 ) EXPRESSION'  ->  num  ---->    
+( 10 , 16 ) EXPRESSION'  ->  +  ---->    
+( 10 , 17 ) EXPRESSION'  ->  -  ---->    
+( 10 , 18 ) EXPRESSION'  ->  $  ---->    
+( 11 , 0 ) SIMPLE_EXPRESSION  ->  id  ---->  SIMPLE_EXPRESSION =   TERM  SIMPLE_EXPRESSION#     
+( 11 , 1 ) SIMPLE_EXPRESSION  ->  ;  ---->  synch  
+( 11 , 2 ) SIMPLE_EXPRESSION  ->  int  ---->    
+( 11 , 3 ) SIMPLE_EXPRESSION  ->  float  ---->    
+( 11 , 4 ) SIMPLE_EXPRESSION  ->  if  ---->    
+( 11 , 5 ) SIMPLE_EXPRESSION  ->  (  ---->  SIMPLE_EXPRESSION =   TERM  SIMPLE_EXPRESSION#     
+( 11 , 6 ) SIMPLE_EXPRESSION  ->  )  ---->  synch  
+( 11 , 7 ) SIMPLE_EXPRESSION  ->  {  ---->    
+( 11 , 8 ) SIMPLE_EXPRESSION  ->  }  ---->    
+( 11 , 9 ) SIMPLE_EXPRESSION  ->  else  ---->    
+( 11 , 10 ) SIMPLE_EXPRESSION  ->  while  ---->    
+( 11 , 11 ) SIMPLE_EXPRESSION  ->  =  ---->    
+( 11 , 12 ) SIMPLE_EXPRESSION  ->  relop  ---->  synch  
+( 11 , 13 ) SIMPLE_EXPRESSION  ->  addop  ---->    
+( 11 , 14 ) SIMPLE_EXPRESSION  ->  mulop  ---->    
+( 11 , 15 ) SIMPLE_EXPRESSION  ->  num  ---->  SIMPLE_EXPRESSION =   TERM  SIMPLE_EXPRESSION#     
+( 11 , 16 ) SIMPLE_EXPRESSION  ->  +  ---->  SIMPLE_EXPRESSION =    SIGN TERM  SIMPLE_EXPRESSION#  
+( 11 , 17 ) SIMPLE_EXPRESSION  ->  -  ---->  SIMPLE_EXPRESSION =    SIGN TERM  SIMPLE_EXPRESSION#  
+( 11 , 18 ) SIMPLE_EXPRESSION  ->  $  ---->    
+( 12 , 0 ) SIMPLE_EXPRESSION#  ->  id  ---->    
+( 12 , 1 ) SIMPLE_EXPRESSION#  ->  ;  ---->  L  
+( 12 , 2 ) SIMPLE_EXPRESSION#  ->  int  ---->    
+( 12 , 3 ) SIMPLE_EXPRESSION#  ->  float  ---->    
+( 12 , 4 ) SIMPLE_EXPRESSION#  ->  if  ---->    
+( 12 , 5 ) SIMPLE_EXPRESSION#  ->  (  ---->    
+( 12 , 6 ) SIMPLE_EXPRESSION#  ->  )  ---->  L  
+( 12 , 7 ) SIMPLE_EXPRESSION#  ->  {  ---->    
+( 12 , 8 ) SIMPLE_EXPRESSION#  ->  }  ---->    
+( 12 , 9 ) SIMPLE_EXPRESSION#  ->  else  ---->    
+( 12 , 10 ) SIMPLE_EXPRESSION#  ->  while  ---->    
+( 12 , 11 ) SIMPLE_EXPRESSION#  ->  =  ---->    
+( 12 , 12 ) SIMPLE_EXPRESSION#  ->  relop  ---->  L  
+( 12 , 13 ) SIMPLE_EXPRESSION#  ->  addop  ---->  SIMPLE_EXPRESSION#  =  addop TERM  SIMPLE_EXPRESSION#   
+( 12 , 14 ) SIMPLE_EXPRESSION#  ->  mulop  ---->    
+( 12 , 15 ) SIMPLE_EXPRESSION#  ->  num  ---->    
+( 12 , 16 ) SIMPLE_EXPRESSION#  ->  +  ---->    
+( 12 , 17 ) SIMPLE_EXPRESSION#  ->  -  ---->    
+( 12 , 18 ) SIMPLE_EXPRESSION#  ->  $  ---->    
+( 13 , 0 ) TERM  ->  id  ---->  TERM =   FACTOR  TERM#  
+( 13 , 1 ) TERM  ->  ;  ---->    
+( 13 , 2 ) TERM  ->  int  ---->    
+( 13 , 3 ) TERM  ->  float  ---->    
+( 13 , 4 ) TERM  ->  if  ---->    
+( 13 , 5 ) TERM  ->  (  ---->  TERM =   FACTOR  TERM#  
+( 13 , 6 ) TERM  ->  )  ---->    
+( 13 , 7 ) TERM  ->  {  ---->    
+( 13 , 8 ) TERM  ->  }  ---->    
+( 13 , 9 ) TERM  ->  else  ---->    
+( 13 , 10 ) TERM  ->  while  ---->    
+( 13 , 11 ) TERM  ->  =  ---->    
+( 13 , 12 ) TERM  ->  relop  ---->    
+( 13 , 13 ) TERM  ->  addop  ---->  synch  
+( 13 , 14 ) TERM  ->  mulop  ---->    
+( 13 , 15 ) TERM  ->  num  ---->  TERM =   FACTOR  TERM#  
+( 13 , 16 ) TERM  ->  +  ---->    
+( 13 , 17 ) TERM  ->  -  ---->    
+( 13 , 18 ) TERM  ->  $  ---->    
+( 14 , 0 ) TERM#  ->  id  ---->    
+( 14 , 1 ) TERM#  ->  ;  ---->    
+( 14 , 2 ) TERM#  ->  int  ---->    
+( 14 , 3 ) TERM#  ->  float  ---->    
+( 14 , 4 ) TERM#  ->  if  ---->    
+( 14 , 5 ) TERM#  ->  (  ---->    
+( 14 , 6 ) TERM#  ->  )  ---->    
+( 14 , 7 ) TERM#  ->  {  ---->    
+( 14 , 8 ) TERM#  ->  }  ---->    
+( 14 , 9 ) TERM#  ->  else  ---->    
+( 14 , 10 ) TERM#  ->  while  ---->    
+( 14 , 11 ) TERM#  ->  =  ---->    
+( 14 , 12 ) TERM#  ->  relop  ---->    
+( 14 , 13 ) TERM#  ->  addop  ---->    
+( 14 , 14 ) TERM#  ->  mulop  ---->  TERM#  =  mulop FACTOR  TERM#   
+( 14 , 15 ) TERM#  ->  num  ---->    
+( 14 , 16 ) TERM#  ->  +  ---->    
+( 14 , 17 ) TERM#  ->  -  ---->    
+( 14 , 18 ) TERM#  ->  $  ---->    
+( 15 , 0 ) FACTOR  ->  id  ---->  FACTOR =   id    
+( 15 , 1 ) FACTOR  ->  ;  ---->    
+( 15 , 2 ) FACTOR  ->  int  ---->    
+( 15 , 3 ) FACTOR  ->  float  ---->    
+( 15 , 4 ) FACTOR  ->  if  ---->    
+( 15 , 5 ) FACTOR  ->  (  ---->  FACTOR =   ( EXPRESSION )  
+( 15 , 6 ) FACTOR  ->  )  ---->    
+( 15 , 7 ) FACTOR  ->  {  ---->    
+( 15 , 8 ) FACTOR  ->  }  ---->    
+( 15 , 9 ) FACTOR  ->  else  ---->    
+( 15 , 10 ) FACTOR  ->  while  ---->    
+( 15 , 11 ) FACTOR  ->  =  ---->    
+( 15 , 12 ) FACTOR  ->  relop  ---->    
+( 15 , 13 ) FACTOR  ->  addop  ---->    
+( 15 , 14 ) FACTOR  ->  mulop  ---->  synch  
+( 15 , 15 ) FACTOR  ->  num  ---->  FACTOR =   num    
+( 15 , 16 ) FACTOR  ->  +  ---->    
+( 15 , 17 ) FACTOR  ->  -  ---->    
+( 15 , 18 ) FACTOR  ->  $  ---->    
+( 16 , 0 ) SIGN  ->  id  ---->  synch  
+( 16 , 1 ) SIGN  ->  ;  ---->    
+( 16 , 2 ) SIGN  ->  int  ---->    
+( 16 , 3 ) SIGN  ->  float  ---->    
+( 16 , 4 ) SIGN  ->  if  ---->    
+( 16 , 5 ) SIGN  ->  (  ---->  synch  
+( 16 , 6 ) SIGN  ->  )  ---->    
+( 16 , 7 ) SIGN  ->  {  ---->    
+( 16 , 8 ) SIGN  ->  }  ---->    
+( 16 , 9 ) SIGN  ->  else  ---->    
+( 16 , 10 ) SIGN  ->  while  ---->    
+( 16 , 11 ) SIGN  ->  =  ---->    
+( 16 , 12 ) SIGN  ->  relop  ---->    
+( 16 , 13 ) SIGN  ->  addop  ---->    
+( 16 , 14 ) SIGN  ->  mulop  ---->    
+( 16 , 15 ) SIGN  ->  num  ---->  synch  
+( 16 , 16 ) SIGN  ->  +  ---->  SIGN =   +    
+( 16 , 17 ) SIGN  ->  -  ---->  SIGN =   -  
+( 16 , 18 ) SIGN  ->  $  ---->    

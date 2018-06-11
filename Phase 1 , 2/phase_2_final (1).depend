@@ -1,0 +1,158 @@
+# depslib dependency file v1.0
+1524762297 source:f:\codeblocks\phase_2_final\convert_to_ll1.cpp
+	"convert_to_LL1.h"
+	<cstdlib>
+
+1524618241 f:\codeblocks\phase_2_final\convert_to_ll1.h
+	<fstream>
+	<sstream>
+	<iostream>
+	<string>
+	<vector>
+
+1524762164 source:f:\codeblocks\phase_2_final\first_follow.cpp
+	"first_follow.h"
+
+1524762342 f:\codeblocks\phase_2_final\first_follow.h
+	<fstream>
+	<sstream>
+	<iostream>
+	<string>
+	<vector>
+	"convert_to_LL1.h"
+
+1524917238 source:f:\codeblocks\phase_2_final\main.cpp
+	<iostream>
+	"convert_to_LL1.h"
+	"first_follow.h"
+	"parsingTable.h"
+	<stdio.h>
+	<vector>
+	<string.h>
+	"NfaGraph.h"
+	"ExpressionEvaluator.h"
+	"Node.h"
+	"NFAConvert.h"
+	"Parser.h"
+	"Minimization.h"
+	"Maximal Munch.h"
+
+1524618267 f:\codeblocks\phase_2_final\parsingtable.h
+	"first_follow.h"
+	<stack>
+	<iostream>
+	<cstdlib>
+
+1524918421 source:f:\codeblocks\phase_2_final\parsingtable.cpp
+	"parsingTable.h"
+	"first_follow.h"
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	<sstream>
+
+1521855109 source:f:\codeblocks\phase_2_final\maximal_munch.cpp
+
+1521903008 source:f:\codeblocks\phase_2_final\expressionevaluator.cpp
+	"ExpressionEvaluator.h"
+	<iostream>
+	<stdlib.h>
+	<algorithm>
+	<stack>
+	<string.h>
+	<string>
+	"NfaGraph.h"
+
+1521852648 f:\codeblocks\phase_2_final\expressionevaluator.h
+	<iostream>
+	<stdlib.h>
+	<algorithm>
+	<stack>
+	<string.h>
+	<string>
+	"NfaGraph.h"
+	"Node.h"
+
+1521852692 f:\codeblocks\phase_2_final\nfagraph.h
+	"Node.h"
+	<string>
+	<string.h>
+
+1521852684 f:\codeblocks\phase_2_final\node.h
+	<vector>
+	<stdlib.h>
+	<string>
+
+1524914745 source:f:\codeblocks\phase_2_final\maximal munch.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	"Maximal Munch.h"
+
+1521899227 f:\codeblocks\phase_2_final\maximal munch.h
+	<map>
+	"iostream"
+	"DFAstate.h"
+	"Parser.h"
+
+1521844882 f:\codeblocks\phase_2_final\dfastate.h
+	<bitset>
+	"constants.h"
+
+1521672133 f:\codeblocks\phase_2_final\constants.h
+
+1521898352 f:\codeblocks\phase_2_final\parser.h
+	<string>
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	"ExpressionEvaluator.h"
+
+1521902225 source:f:\codeblocks\phase_2_final\minimization.cpp
+	<iostream>
+	<stdlib.h>
+	<stdio.h>
+	"Minimization.h"
+	<algorithm>
+	<vector>
+
+1521902252 f:\codeblocks\phase_2_final\minimization.h
+	<iostream>
+	<stdlib.h>
+	<stdio.h>
+	"NFAConvert.h"
+
+1521853286 f:\codeblocks\phase_2_final\nfaconvert.h
+	<vector>
+	<bitset>
+	<iostream>
+	"Node.h"
+	"NfaGraph.h"
+	"constants.h"
+	"DFAstate.h"
+
+1521854731 source:f:\codeblocks\phase_2_final\nfaconvert.cpp
+	"NFAConvert.h"
+	<bitset>
+	<queue>
+
+1521854814 source:f:\codeblocks\phase_2_final\nfagraph.cpp
+	"NfaGraph.h"
+	<iostream>
+	<stdlib.h>
+	<algorithm>
+	<stack>
+	<string.h>
+	<string>
+	<vector>
+
+1521852692 source:f:\codeblocks\phase_2_final\node.cpp
+	"Node.h"
+
+1521899346 source:f:\codeblocks\phase_2_final\parser.cpp
+	"Parser.h"
+	<stdio.h>
+	<string>
+	<vector>
+

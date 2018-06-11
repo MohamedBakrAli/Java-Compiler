@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="phase_2_final" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/phase_2_final" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/phase_2_final" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="CFG.txt" />
+		<Unit filename="DFAstate.h" />
+		<Unit filename="ExpressionEvaluator.cpp" />
+		<Unit filename="G" />
+		<Unit filename="Lex_analizer_grammar.txt" />
+		<Unit filename="Lex_analizer_input_code.txt" />
+		<Unit filename="Lex_analizer_output.txt" />
+		<Unit filename="Maximal Munch.cpp" />
+		<Unit filename="Maximal Munch.h" />
+		<Unit filename="Maximal_munch.cpp" />
+		<Unit filename="Maximal_munch.h" />
+		<Unit filename="Minimization.cpp" />
+		<Unit filename="Minimization.h" />
+		<Unit filename="NFAConvert.cpp" />
+		<Unit filename="NFAConvert.h" />
+		<Unit filename="NfaGraph.cpp" />
+		<Unit filename="NfaGraph.h" />
+		<Unit filename="Node.cpp" />
+		<Unit filename="Node.h" />
+		<Unit filename="Parser.cpp" />
+		<Unit filename="Parser.h" />
+		<Unit filename="code.txt" />
+		<Unit filename="constants.h" />
+		<Unit filename="convert_to_LL1.cpp" />
+		<Unit filename="convert_to_LL1.h" />
+		<Unit filename="factor.txt" />
+		<Unit filename="first_follow.cpp" />
+		<Unit filename="first_follow.h" />
+		<Unit filename="gamal.txt" />
+		<Unit filename="heelo.txt" />
+		<Unit filename="int" />
+		<Unit filename="main.cpp" />
+		<Unit filename="mos.txt" />
+		<Unit filename="out.txt" />
+		<Unit filename="output.txt" />
+		<Unit filename="parser_phase2.depend" />
+		<Unit filename="parser_phase2.layout" />
+		<Unit filename="parsingTable.cpp" />
+		<Unit filename="parsingTable.h" />
+		<Unit filename="pro.txt" />
+		<Unit filename="î@" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
